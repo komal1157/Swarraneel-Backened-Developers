@@ -45,12 +45,12 @@ const UserSchema = new mongoose.Schema({
   otp: {
     type: String,
   },
-
+  
   otpExpiration: {
     type: Date,
   },
 });
 
-const authModel = mongoose.model("User", UserSchema);
+const authModel = mongoose.model("User ", UserSchema);
 
 export default authModel;

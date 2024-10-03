@@ -6,7 +6,7 @@ import authRoutes from "./routes/authRoutes.js";
 import dotenv from 'dotenv';
 import cors from 'cors';
 import CreateUser from "./controllers/NewUser.js";
-import  authController from "./controllers/authController.js";
+import  authController, { register } from "./controllers/authController.js";
 import axios from "axios";
 
 // Load environment variables from .env file
@@ -28,6 +28,7 @@ connectDB();
 
 app.post('/User', CreateUser);//post request to store data
 
+app.post('User',register);
 
 // Start server
 app.listen(PORT, () => {
