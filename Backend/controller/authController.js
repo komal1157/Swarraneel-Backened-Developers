@@ -74,6 +74,7 @@ export async function login(req, res) {
 }
 
 // Send OTP
+//both email or mobile NUmber
 export async function sendOTP(req, res) {
   try {
     const { email, contactno } = req.body;
